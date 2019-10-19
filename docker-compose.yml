@@ -20,13 +20,17 @@ services:
     depends_on:
         - php56
   php56:
-    image: php:5.6-fpm-stretch
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile56
     volumes:
       - ./app:/var/www/app
     depends_on:
       - memcached
   php73:
-    image: php:7.3-fpm-stretch
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile73
     volumes:
       - ./app:/var/www/app
     depends_on:
