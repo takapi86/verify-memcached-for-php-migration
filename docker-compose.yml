@@ -7,6 +7,7 @@ services:
         - "10056:80"
     volumes:
       - ./app:/var/www/app
+      - ./docker/php56/php.ini:/usr/local/etc/php/php.ini
       - ./docker/php56/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
         - php56
@@ -16,6 +17,7 @@ services:
         - "10073:80"
     volumes:
       - ./app:/var/www/app
+      - ./docker/php73/php.ini:/usr/local/etc/php/php.ini
       - ./docker/php73/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
         - php56
