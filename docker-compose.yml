@@ -7,7 +7,7 @@ services:
         - "10056:80"
     volumes:
       - ./app:/var/www/app
-      - ./nginx/default56.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/default56.conf:/etc/nginx/conf.d/default.conf
     depends_on:
         - php56
   nginx-php73:
@@ -16,7 +16,7 @@ services:
         - "10073:80"
     volumes:
       - ./app:/var/www/app
-      - ./nginx/default73.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/default73.conf:/etc/nginx/conf.d/default.conf
     depends_on:
         - php56
   php56:
