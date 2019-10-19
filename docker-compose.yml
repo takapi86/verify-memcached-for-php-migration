@@ -27,6 +27,9 @@ services:
       - ./app:/var/www/app
     depends_on:
       - memcached
+    environment:
+      TZ: Asia/Tokyo
+      LANG: ja_JP.UTF-8
   php73:
     build:
       context: .
@@ -35,5 +38,8 @@ services:
       - ./app:/var/www/app
     depends_on:
       - memcached
+    environment:
+      TZ: Asia/Tokyo
+      LANG: ja_JP.UTF-8
   memcached:
     image: memcached
