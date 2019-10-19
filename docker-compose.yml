@@ -5,3 +5,5 @@ services:
     image: php:5.6-fpm-stretch
   php73:
     image: php:7.3-fpm-stretch
+  memcached:
+    image: memcached
